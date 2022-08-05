@@ -49,6 +49,9 @@ const getUploadURL = async function (event) {
 
   return {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+  },
     body: JSON.stringify({
       uploadURL: uploadURL,
       fileURL: `https://assemble-images.hackclub.com/${Key}`,
